@@ -1,0 +1,294 @@
+@prefix ckg:<http://ContractKR/ckg#> .
+
+#General
+
+
+
+#The contractor's main responsibilities
+
+
+#Time
+#30.1
+<<ckg:Contractor ckg:doesNotStart ckg:workOnTheSite>>
+	ckg:hasTimeConstraint ckg:untilTheFirstAccessDate;
+	ckg:hasElseConstraint_so-that <<ckg:Completion ckg:hasProperty ckg:onOrBeforeTheCompletionDate>>.
+#30.2
+<<ckg:ProjectManager ckg:decideAndCertify ckg:dateOfCompletion>>
+	ckg:hasTimeConstraint ckg:withOneWeekOfTheDate .
+#30.3
+<<ckg:Contractor ckg:do ckg:work>>
+	ckg:hasElseConstraint_so-that <<ckg:keyDate ckg:hasProperty ckg:meetConditionStateForEachKeyDate>> .
+#31.1
+<<ckg:Contractor ckg:submit ckg:firstProgramme>>
+	ckg:hasElseConstraint_to ckg:ProjectManager ;
+    ckg:hasPurpose ckg:forAcceptance ;
+	ckg:hasTimeConstraint ckg:withinThePeriodStateInTheContractData ;
+	ckg:if-then <<ckg:programme ckg:hasPropety ckg:isNotIdentifyinContractData>> .
+#31.2
+<<ckg:Contractor ckg:showOn ckg:submittedProgramme>>
+	ckg:hasContentConstraint ckg:startingDate ;
+	ckg:hasContentConstraint ckg:accessDate ;
+	ckg:hasContentConstraint ckg:plannedCompletion ;
+	ckg:hasContentConstraint ckg:theOrderAndTimingOfTheOperationWhichTheContractorPlanToDoinOrderToProvideTheWork ;
+	ckg:hasContentConstraint ckg:theOrderAndTimingOfTheWorkOfTheClientAndOthersAsLastAgreedWithThemByTheContractor ;
+	ckg:hasContentConstraint ckg:datesWhenTheContractorPlanToMeetEachConditionStatedForTheKeyDateAndToComplete ;
+	ckg:hasContentConstraint ckg:datesWhenTheContractorPlanToCompleteOtherWorkNeededToAllowTheClientAndOthersToDoTheirWork ;
+	ckg:hasContentConstraint ckg:provisionForFloat ;
+	ckg:hasContentConstraint ckg:provisionForTimeRiskAllowance ;
+	ckg:hasContentConstraint ckg:provisionForHealthAndSafetyRequirement ;
+	ckg:hasContentConstraint ckg:provisionForProceduresSetOutInTheContract ;
+	ckg:hasContentConstraint <<ckg:date ckg:hasPurposeConstraint ckg:whenContractorNeedToDoFollowinfThings>> ;
+	ckg:hasContentConstraint ckg:theOrderAndTimingOfTheOperationWhichTheContractorPlanToDoinOrderToProvideTheWork ;
+	ckg:hasContentConstraint ckg:theOrderAndTimingOfTheWorkOfTheClientAndOthersAsLastAgreedWithThemByTheContractor ;
+	ckg:hasContentConstraint ckg:datesWhenTheContractorPlanToMeetEachConditionStatedForTheKeyDateAndToComplete ;
+	ckg:hasContentConstraint ckg:datesWhenTheContractorPlanToCompleteOtherWorkNeededToAllowTheClientAndOthersToDoTheirWork ;
+	ckg:hasContentConstraint ckg:provisionForFloat ;
+	ckg:hasContentConstraint ckg:provisionForTimeRiskAllowance ;
+	ckg:hasContentConstraint ckg:eachOperationAndStatementOfHowTheContractorPlansToDoTheWorkIdentifyThePrincipalEquipmentAndOtherResourceWhichWillBeUsed ;
+	ckg:hasContentConstraint ckg:OtherInformationWhichTheScopeRequireTheContractorToShowOnAProgrammeSubmittedForAcceptance .
+<<ckg:date ckg:hasPurposeConstraint ckg:whenContractorNeedToDoFollowinfThings>>
+	ckg:hasPurposeConstraint ckg:accessToAPartOfTheSiteIfLaterThanItsAccessDate ;
+	ckg:hasPurposeConstraint ckg:forAcceptance ;
+	ckg:hasPurposeConstraint ckg:PlantAndMaterialsAndOtherThingToBeProvidedByTheClient ;
+	ckg:hasPurposeConstraint ckg:InformationFromOthers .	
+<<ckg:Programme ckg:hasProperty ckg:issueForAcceptanceOfTheQuotation>>
+	ckg:hasContentConstraint ckg:inTheFormStatedInTheScope.
+#31.3
+<<ckg:ProjectManager ckg:notify ckg:Contractor>>
+	ckg:hasContentConstraint ckg:acceptanceOfTheProgramme ;
+	ckg:hasContentConstraint ckg:reasonForNotAccepting ;
+	ckg:withinTwoWeeksOf <<ckg:Contractor ckg:submit ckg:Programme>> .
+<<ckg:Programme ckg:hasPropety ckg:isNotAccepted>>
+	ckg:hasElseConstraint_reason ckg:ContractorPlanWhichItshowAreNotPracticable ;
+	ckg:hasElseConstraint_reason ckg:programmeDoNotShowTheInformationWhichTheContractRequire ;
+	ckg:hasElseConstraint_reason ckg:programmeDoNotRepresentTheContractorPlanRealistically ;
+    ckg:hasElseConstraint_reason ckg:programmeDoNotComplyWithTheScope .
+<<ckg:Contractor ckg:notify ckg:ProjectManager>>
+	ckg:hasContentConstraint ckg:failureOfTheProjectManager ;
+	ckg:if-then <<ckg:ProjectManager ckg:doNotNotify ckg:acceptanceOrNon-acceptance>> .
+<<ckg:ProjectManager ckg:doNotNotify ckg:acceptanceOrNon-acceptance>>		
+	ckg:hasTimeConstraint ckg:withinTheTimeAllowed .
+<<ckg:ProjectManager ckg:accept ckg:Programme>>
+	ckg:if-then <<ckg:failure ckg:hasProperty ckg:continueForAFurtherOneWeekAfterTheContractorsNotification>> .
+#32.1
+<<ckg:Contractor ckg:showOn ckg:revisedProgramme>>
+	ckg:hasContentConstraint ckg:actualProgressAchieveOnEachOperationAndItsEffectUponTheTimingOfTheRemainingWork ;
+	ckg:hasContentConstraint ckg:howTheContractorPlanTodealWithAnyDelayAndToCorrectNotifyDefect ;
+	ckg:hasContentConstraint ckg:AnyOtherChangeWhichTheContractorProposeToMakeToTheAcceptedProgramme .
+#32.2
+<<ckg:Contractor ckg:submit ckg:revisedProgramme>>
+	ckg:hasElseConstraint_to ckg:ProjectManager ;
+	ckg:hasPropety ckg:forAcceptance ;
+	ckg:hasTimeConstraint ckg:withinThePeriodForReply;
+	ckg:hasTimeConstraint ckg:afterProjectManagerHasInstructedTheContractorTo;
+	ckg:hasTimeConstraint ckg:whenContractorChooseTo;
+	ckg:hasTimeConstraint ckg:atNoLongerIntervalThanTheIntervalStatedInTheContractDataFromStartingDateUntilCompletionOfTheWholeOfTheWork .
+#33.1
+<<ckg:Client ckg:allow ckg:Contractor>>
+	ckg:hasContentConstraint ckg:accessToAndUseOfEachPartOfTheSiteWhichIsNecessaryForTheWorkIncludedInTheContract .
+<<ckg:accessAndUse ckg:hasProperty ckg:isAllowed>>
+	ckg:hasTimeConstraint ckg:onTheLaterOfItsAccessDateAndTheDateForAccessShownOnTheAcceptedProgramme ;
+	ckg:hasTimeConstraint ckg:beforeTheLaterOfItsAccessDateAndTheDateForAccessShownOnTheAcceptedProgramme .
+#34.1
+<<ckg:ProjectManger ckg:instruct ckg:Contractor>>
+	ckg:hasPurposeConstraint ckg:stopOrNotStartAnyWork .
+<<ckg:ProjectManager ckg:giveAnInstructionTo ckg:Contractor>>
+	ckg:hasPurposeConstraint ckg:re-startOrStartTheWorkOrRemoveTheWorkFromTheScope .
+#35.1
+<<ckg:Client ckg:needNotTakeOver ckg:works>>
+	ckg:hasTimeConstraint ckg:beforeTheCompletionDate;
+	ckg:if-then <<ckg:ContractData ckg:state ckg:ProjectManagerIsNotWillingToDo>>;
+	ckg:otherwise <<ckg:Client ckg:takeOver ckg:theWork>> .
+<<ckg:Client ckg:takeOver ckg:theWork>>
+	ckg:hasTimeConstraint ckg:notLaterThanTwoWeeksAfterCompletion .
+#35.2
+<<ckg:Client ckg:use ckg:partOfTheWork>>
+	ckg:hasTimeConstraint ckg:beforeCompletionHasBeenCertified.
+<<ckg:Client ckg:takeOver ckg:partOfTheWorks>>
+	ckg:hasTimeConstraint ckg:whenItBeginToUse;
+	ckg:exceptIf <<ckg:theUse ckg:hasPurposeConstraint ckg:forAReasonStateInTheScope>> ;
+	ckg:exceptIf <<ckg:theUse ckg:hasPurposeConstraint ckg:toSuitTheContractorsMethodOfWorking>> .
+#35.3
+<<ckg:ProjectManager ckg:certify ckg:dateUponWhichTheClientTakeOverAnyPartOfTheWroksAndItsExtent>>
+	ckg:hasTimeConstraint ckg:withinOneWeekOfTheDate .
+#36.1
+<<ckg:ContractorAndProjectManager ckg:proposeTo ckg:theOther>>
+	ckg:hasContentConstraint ckg:accelerationToAchieveCompletion ;
+	ckg:hasTimeConstraint ckg:beforeTheCompletionDate.
+<<ckg:ProjectManager ckg:instruct ckg:Contractor>>
+	ckg:hasPurposeConstraint ckg:provideAQuotation ;
+	ckg:if-then <<ckg:ProjectManagerAndContractor ckg:prepareToConsider ckg:proposedChange>> .
+<<ckg:instruction ckg:state ckg:changesToTheKeyDate>>
+	ckg:hasPurposeConstriant ckg:toIncludeInTheQuotation .
+<<ckg:Contractor ckg:provide ckg:Quotation>>
+	ckg:hasTimeConstraint ckg:withinThreeWeeksOfTheInstructionToDoSo .
+<<ckg:ProjectManger ckg:reply ckg:Quotation>>
+    ckg:hasTimeConstraint ckg:withinThreeWeeks .
+ckg:Reply ckg:hasContentConstraint ckg:notificationThatTheQuotationIsAccepted .
+ckg:Reply ckg:hasContentConstraint ckg:notificationThatTheQuotationIsNotAccepted .
+ckg:Reply ckg:hasContentConstraint ckg:notificationThatTheCompletionDateAndKeyDateAreNotChange .
+
+ckg:QuotationForAnAcceleration ckg:hasProperty ckg:compriseProposedChangesToThePrice.
+ckg:QuotationForAnAcceleration ckg:hasProperty ckg:compriseRevisedProgrammeShowingTheEarlierCompletionDateAndChangedKeyDate .
+<<ckg:Contractor ckg:submit ckg:detailOfTheAssessment>>
+    ckg:hasContentConstraint ckg:withEachQuotation .
+<<ckg:QuotationForAnAcceleration ckg:hasPropety ckg:isAccepted>>
+	ckg:if-then <<ckg:ProjectManager ckg:change ckg:priceAndCompletionDateAndTheKeyDate>>;
+	ckg:if-then <<ckg:ProjectManager ckg:accept ckg:revisedProgramme>> .
+
+#Quality Management
+
+#40.1
+<<ckg:Contractor ckg:operate ckg:QualityManagementsystem>>
+	ckg:hasElseConstraint ckg:complieWithTheRequirementsStateInTheScope .
+#40.2
+<<ckg:Contractor ckg:provide ckg:ProjectManager>>
+	ckg:hasContentConstraint ckg:QualityPolicyStatement ;
+	ckg:hasContentConstraint ckg:QualityPlan ;
+	ckg:hasPurposeConstraint ckg:forAcceptance ;
+	ckg:hasTimeConstraint ckg:withinThePeriodStatedInTheContractData .
+<<ckg:QualityPlan ckg:hasPropety ckg:isChanged>>
+	ckg:if-then <<ckg:Contractor ckg:provide ckg:ProjectManager>> .
+<<ckg:Contractor ckg:provide ckg:ProjectManager>>
+	ckg:hasContentConstraint ckg:changedQualityPlan ;
+	ckg:hasPurposeConstraint ckg:forAcceptance .
+#40.3
+<<ckg:ProjectManager ckg:instruct ckg:Contractor>>
+	ckg:hasContentConstraint <<ckg:Contractor ckg:correct ckg:failure>> ;
+	ckg:hasPropety ckg:isNotCompensationEvent .
+<<ckg:Contractor ckg:correct ckg:failure>>
+	ckg:hasPurposeConstraint ckg:complyWithTheQualityPlan .
+#41.1 This clause only applies to tests and inspections required by the Scope or the applicable law.
+#41.2
+<<ckg:ContractorAndClient ckg:provide ckg:materialAndFacilitiesAndSamples>>
+	ckg:hasPurposeConstraint ckg:forTestAndInspection ;
+	ckg:hasElseConstraint ckg:asStatedInTheScope .
+#41.3
+<<ckg:ContractorAndSupervisor ckg:inform ckg:theOTher>>
+	ckg:hasContentConstraint ckg:eachOfTheirTestAndInspection ;
+	ckg:hasTimeConstraint ckg:beforeTheTestOrInspectionStart ;
+	ckg:hasTimeConstraint ckg:afterInformTheOtherOfTheResult .
+<<ckg:Contractor ckg:inform ckg:Supervisor>>
+	ckg:hasPurposeConstraint ckg:forAtestOrInspectionToBeArrangedAndDone ;
+	ckg:hasTimeConstraint ckg:beforeDoingWorkWhichWouldObstructTheTestOrInspection .
+ckg:Supervisor ckg:watch ckg:anyTestDoneByTheContractor .
+#41.4
+<<ckg:work ckg:hasPropety ckg:hasDefect>>
+	ckg:if-then <<ckg:Contractor ckg:correct ckg:defect>> ;
+	ckg:if-then <<ckg:testOrInspection ckg:hasPropety ckg:isRepeated>> .
+#41.5
+<<ckg:Supervisor ckg:do ckg:testAndInspection>>
+	ckg:hasConstraint ckg:withoutCausingUnecessaryDelaytoAWork ;
+	ckg:hasConstraint ckg:withoutCausingUnecessaryDelayToAPayment .	
+<<ckg:Payment ckg:hasPropety ckg:becomeDue>>
+	ckg:hasTimeConstraint ckg:laterOfDefectsDateAndEndOfLastDefectCorrectionPeriod .
+<<ckg:Payment ckg:hasPropety ckg:becomeDue>>
+	ckg:if-then <<ckg:Supervsor ckg:hasNotDone ckg:testOrInspection>> .
+<<ckg:Payment ckg:hasPropety ckg:becomeDue>>
+	ckg:if-then <<ckg:delayToTestOrInspection ckg:hasPropety ckg:isNotContractorsFault>> .
+#41.6
+<<ckg:ProjectManager ckg:assess ckg:costIncurredByTheClient>>
+	ckg:hasTimeConstraint ckg:afterADefectIsFound .
+ckg:Contractor ckg:pay ckg:amountAssessed .
+#42.1
+<<ckg:Contractor ckg:doesNotBring ckg:PlantAndMaterialsWhichScopeStateToBeTestedOrInspected>>
+	ckg:hasTimeConsrtaint ckg:beforeDelivery ;
+	ckg:until <<ckg:Supervisor ckg:notify ckg:Contractor>> .
+<<ckg:Supervisor ckg:notify ckg:Contractor>>
+	ckg:hasContentConstraint ckg:ContractHavePassedTestOrInspection .
+#43.1
+<<ckg:Supervisor ckg:instruct ckg:Contractor>>
+	ckg:hasContentConstraint ckg:searchForADefect ;
+	ckg:hasTimeConstraint ckg:untilDefectDate .
+ckg:Supervisor ckg:giveReasonFor ckg:searchWithTheInstruction .
+ckg:searching ckg:hasContentConstraint ckg:uncoveringAndDismantlingAndRecoeringAndRe-erectingWork .
+#43.2
+<<ckg:SupervisorAndContractor ckg:notify ckg:theOther>>
+	ckg:hasTimeConstraint ckg:asSoonAsTheyBecomeAwareOfADefect ;
+	ckg:hasTimeConstraint ckg:untilDefectDate .
+#44.1
+<<ckg:Contractor ckg:correct ckg:Defect>>
+	ckg:whetherOrNot <<ckg:Supervisor ckg:notify ckg:defect>> .
+#44.2
+<<ckg:Contractor ckg:correct ckg:notifiedDefect>>
+	ckg:hasTimeConstraint ckg:beforeEndOfDefectCorrectionPeriod .
+ckg:DefectCorrectionPeriod ckg:hasProperty ckg:beginAtCompletionForDefectNotifiedBeforeCompletion;
+	ckg:hasProperty ckg:whenDefectIsNotifiedForOtherDefect .
+<<ckg:notifiedDefects ckg:hasProperty ckg:hasNone>>
+ckg:if-then <<ckg:Supervisor ckg:issue ckg:DefectCertificate>> .
+#44.3
+<<ckg:Supervisor ckg:issue ckg:DefectCertificate>>
+	ckg:hasTimeConstraint ckg:atDefectDate .
+<<ckg:Supervisor ckg:issue ckg:DefectCertificate>>
+	ckg:hasTimeConstraint_earlierOf ckg:endOfLastDefectCorrectionPeriod ;
+	ckg:hasTimeConstraint_earlierOf ckg:whenAllNotifiedDefectsCorrected ;
+	ckg:ifNot-then <<ckg:notifiedDefects ckg:hasProperty ckg:hasNone>> .
+ckg:ClientRightInRespectOfADefect_WhichSupervisorHasNotFoundOrNotified ckg:hasProperty ckg:areNotAffectedByIssueOfDefectsCertificate .
+<<ckg:CorrectingDefect ckg:hasProperty ckg:isNeeded>>
+	ckg:if-then <<ckg:ProjectManager ckg:arrangeFor ckg:Client>> .
+#44.4
+<<ckg:ProjectManager ckg:arrangeFor ckg:Client>>
+	ckg:hasContentConstraint	ckg:allowContratorAccesToAndUseOfAPartOfWorksWhichHasBeenTakenOver .
+ckg:defectCorrectionPeriod ckg:hasProperty ckg:beginWhenNecessaryAccessAndUseHaveBeenProvided .
+#45.1
+<<ckg:ContractorAndProjectManager ckg:proposeTo ckg:eachOther>>
+	ckg:hasContent <<ckg:Scope ckg:hasProperty ckg:shouldBeChanged>>;
+	ckg:hasElseConstraint_so-that <<ckg:Defect ckg:hasProperty ckg:doesNotHaveToBeCorrected>> .
+#45.2
+<<ckg:ContractorAndProjectManager ckg:consider ckg:changeOfScope>>
+	ckg:if-then <<ckg:Contractor ckg:submit ckg:quotation>> .
+<<ckg:Contractor ckg:submit ckg:quotation>>
+	ckg:hasElseConstraint_to ckg:ProjectManager;
+	ckg:hasPurposeConstraint ckg:reducedPrice;
+	ckg:hasPurposeConstraint ckg:earlierCompletionDate;
+	ckg:hasPurposeConstraint ckg:forAcceptance .
+<<ckg:Quotation ckg:hasProperty ckg:isAccepted>>
+	ckg:if-then <<ckg:ProjectManager ckg:change ckg:Scope>>;
+	ckg:if-then <<ckg:ProjectManager ckg:change ckg:Price>>;
+	ckg:if-then <<ckg:ProjectManager ckg:change ckg:CompletionDate>>;
+	ckg:if-then <<ckg:ProjectManager ckg:accept ckg:revisedProgramme>> .
+#46.1
+<<ckg:Contractor ckg:isGiven ckg:access>>
+	ckg:hasPurposeConstraint ckg:correctNotifiedDefect;
+	ckg:and <<ckg:correct ckg:hasProperty ckg:isNotCorrected>>;
+	ckg:if-then <<ckg:ProjectManager ckg:assess ckg:costToClientOfCorrectingDefectByOtherPeople>>;
+	ckg:if-then <<ckg:Contractor ckg:pay ckg:costOfCorrectingDefect>>;
+	ckg:if-then <<ckg:Scope ckg:hasProperty ckg:isTreatedAsHavingBeenChangedToAcceptTheDefect>> .
+<<ckg:correct ckg:hasProperty ckg:isNotCorrected>>
+	ckg:hasTimeConstraint ckg:withinItsDefectCorrectionPeriod .
+#46.2
+<<ckg:Contractor ckg:isNotGiven ckg:access>>
+	ckg:hasPurposeConstraint ckg:correctNotifiedDefect;
+	ckg:hasTimeConstraint ckg:beforeDefectsDate;
+	ckg:if-then <<ckg:ProjectManager ckg:assess ckg:costToContractorOfCorrectingDefect>>;
+	ckg:if-then <<ckg:Contractor ckg:pay ckg:costOfCorrectingDefect>> ;
+	ckg:if-then <<ckg:Scope ckg:hasProperty ckg:isTreatedAsHavingBeenChangedToAcceptTheDefect>> .
+
+#Payment
+#50.1
+<<ckg:ProjectManager ckg:assess ckg:amountDue>>
+	ckg:hasTimeConstraint ckg:atEachAssessmentDate .
+<<ckg:ProjectManager ckg:decide ckg:firstAssessmentDate>>
+	ckg:hasPurposeConstraint ckg:suitProcedureOfTheParties ;
+	ckg:hasTimeConstraint ckg:noLaterThanTheAssessmentIntervalAfterTheStartingDate.
+ckg:laterAssessmentDate ckg:hasProperty ckg:occurAtTheEndOfEachAssessmentInterval ;
+	ckg:hasProperty ckg:untilSupervisorIssueTheDefectCertificateOr ;
+	ckg:hasProperty ckg:ProjectManagerIssueATerminationCertificate .
+#50.2
+<<ckg:Contractor ckg:submit ckg:applicationForPayment>>
+	ckg:hasElseContraint_to ckg:ProjectManager ;
+	ckg:hasTimeConstraint ckg:beforeEachAssessmentDate ;
+	ckg:hasContentConstraint ckg:settingOutTheAmountTheContractorConsiderIsDueAtAssessmentDate .
+ckg:ContractorsApplicationForPayment ckg:hasProperty ckg:includesDetailsOfHowTheAmountHasBeenAssessed .
+ckg:ContractorsApplicationForPayment ckg:hasProperty ckg:isInTheFormStatedInTheScope .
+<<ckg:ProjectManager ckg:consider ckg:applicationForPaymentSubmittedByContractor>>
+	ckg:hasElseConstraint_in ckg:assessingTheamountDue .
+#50.3
+<<ckg:Contractor ckg:submit ckg:applicationForPayment>>
+	ckg:hasTimeConstraint ckg:beforeAssessmentDate ;
+	ckg:if-then <<ckg:amountDuetAssessmentDate ckg:hasProperty ckg:PWDD-Plus-otherAmountToBePaidToContractor-less-AmountToBePaidByOrRetainedFromContractor>> .
+#50.4
+<<ckg:Contractor ckg:doesNotsubmit ckg:applicationForPayment>>
+	ckg:hasTimeConstraint ckg:beforeAssessmentDate ;
+	ckg:if-then <<ckg:amountDuetAssessmentDate ckg:hasProperty ckg:lesserOfAmountProjectManagerAsDueAtAssessmentDate-And-TheamountDueAtPreviousAssessmentDate>> .
+#50.5

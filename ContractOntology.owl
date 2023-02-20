@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#"
+     xml:base="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr13abfd2b_7d2a_40a7_ab53_6b45c53c3752 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr13abfd2b_7d2a_40a7_ab53_6b45c53c3752">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr63984d9d_41c8_46b3_99e6_453d03a7f7b9"/>
+        <rdfs:label xml:lang="zh">Instruction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr22bb567c_16d9_4b3a_acf6_a56e82613ebf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr22bb567c_16d9_4b3a_acf6_a56e82613ebf">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr642b348c_8276_4f4f_ba00_e13149bc0721"/>
+        <rdfs:label xml:lang="zh">Inclusion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr3de095a1_308b_4453_86ec_a7ca3258b48e -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr3de095a1_308b_4453_86ec_a7ca3258b48e">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9b8499b9_7804_4ac0_b182_dc73b46a18cc"/>
+        <rdfs:label xml:lang="zh">Environment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr43d05c89_ea05_4638_bb30_857ffcc82d14 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr43d05c89_ea05_4638_bb30_857ffcc82d14">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr7afc6b30_b7e3_486b_907b_eb2394ca5349"/>
+        <rdfs:label xml:lang="zh">Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr5d0a57be_e83b_4c0d_85ce_089c94bcb127 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr5d0a57be_e83b_4c0d_85ce_089c94bcb127">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9b8499b9_7804_4ac0_b182_dc73b46a18cc"/>
+        <rdfs:label xml:lang="zh">Construction_goods</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr5e183b07_d57c_46ac_8d83_3982aecfcd31 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr5e183b07_d57c_46ac_8d83_3982aecfcd31">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9b8499b9_7804_4ac0_b182_dc73b46a18cc"/>
+        <rdfs:label xml:lang="zh">Construction_works</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr63984d9d_41c8_46b3_99e6_453d03a7f7b9 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr63984d9d_41c8_46b3_99e6_453d03a7f7b9">
+        <rdfs:label xml:lang="zh">Behavior</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr642b348c_8276_4f4f_ba00_e13149bc0721 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr642b348c_8276_4f4f_ba00_e13149bc0721">
+        <rdfs:label xml:lang="zh">Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr68da4a18_e6f0_499d_a6ad_f91587167436 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr68da4a18_e6f0_499d_a6ad_f91587167436">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr642b348c_8276_4f4f_ba00_e13149bc0721"/>
+        <rdfs:label xml:lang="zh">Definition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr6b0248a7_2257_4f69_a175_b6e22491cebf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr6b0248a7_2257_4f69_a175_b6e22491cebf">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr7afc6b30_b7e3_486b_907b_eb2394ca5349"/>
+        <rdfs:label xml:lang="zh">Third-party</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr78b8fe94_59cb_428d_b0b2_0dd84cd8dc8e -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr78b8fe94_59cb_428d_b0b2_0dd84cd8dc8e">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9ef7d31a_ff83_4dfe_bb7c_4765020109e0"/>
+        <rdfs:label xml:lang="zh">Time_constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr7afc6b30_b7e3_486b_907b_eb2394ca5349 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr7afc6b30_b7e3_486b_907b_eb2394ca5349">
+        <rdfs:label xml:lang="zh">Contractor_actor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr7d3c761c_aae6_4376_b133_04dc937545da -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr7d3c761c_aae6_4376_b133_04dc937545da">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9ef7d31a_ff83_4dfe_bb7c_4765020109e0"/>
+        <rdfs:label xml:lang="zh">Content_constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr82a38372_f46f_4973_8dc2_283051f13ece -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr82a38372_f46f_4973_8dc2_283051f13ece">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr7afc6b30_b7e3_486b_907b_eb2394ca5349"/>
+        <rdfs:label xml:lang="zh">Party</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9b8499b9_7804_4ac0_b182_dc73b46a18cc -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9b8499b9_7804_4ac0_b182_dc73b46a18cc">
+        <rdfs:label xml:lang="zh">Contractor_object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9ef7d31a_ff83_4dfe_bb7c_4765020109e0 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9ef7d31a_ff83_4dfe_bb7c_4765020109e0">
+        <rdfs:label xml:lang="zh">Constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9fb0e2ba_2ab7_4032_add5_51f85b727177 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9fb0e2ba_2ab7_4032_add5_51f85b727177">
+        <rdfs:label xml:lang="zh">Statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckra6425a7f_5035_48e6_a3e5_c7e0cdfa3dca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckra6425a7f_5035_48e6_a3e5_c7e0cdfa3dca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9b8499b9_7804_4ac0_b182_dc73b46a18cc"/>
+        <rdfs:label xml:lang="zh">Legal_issue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrb444f57b_c762_4320_a7dd_8bef14641d11 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrb444f57b_c762_4320_a7dd_8bef14641d11">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr642b348c_8276_4f4f_ba00_e13149bc0721"/>
+        <rdfs:label xml:lang="zh">Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrb4e374d2_ef84_42bb_9af6_58ff406d563a -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrb4e374d2_ef84_42bb_9af6_58ff406d563a">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr63984d9d_41c8_46b3_99e6_453d03a7f7b9"/>
+        <rdfs:label xml:lang="zh">Decision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrc3eeb6a8_4642_4220_bab4_b3ca090cec75 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrc3eeb6a8_4642_4220_bab4_b3ca090cec75">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9b8499b9_7804_4ac0_b182_dc73b46a18cc"/>
+        <rdfs:label xml:lang="zh">Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrcb3c4934_ef38_4079_bdab_73285b4ff9cd -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrcb3c4934_ef38_4079_bdab_73285b4ff9cd">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9b8499b9_7804_4ac0_b182_dc73b46a18cc"/>
+        <rdfs:label xml:lang="zh">Information</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrd473ddee_de9b_42b6_9aa7_9bd2b2753342 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrd473ddee_de9b_42b6_9aa7_9bd2b2753342">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr63984d9d_41c8_46b3_99e6_453d03a7f7b9"/>
+        <rdfs:label xml:lang="zh">Inspection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckred919d08_bd12_4b6b_94d8_2b0eac055186 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckred919d08_bd12_4b6b_94d8_2b0eac055186">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9ef7d31a_ff83_4dfe_bb7c_4765020109e0"/>
+        <rdfs:label xml:lang="zh">Purpose_constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrff0cdaf0_f938_404e_b2f5_a4f3f9afa960 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrff0cdaf0_f938_404e_b2f5_a4f3f9afa960">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr63984d9d_41c8_46b3_99e6_453d03a7f7b9"/>
+        <rdfs:label xml:lang="zh">Submission</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr8fbbbbc4_eec4_468f_bdc8_2e20f3fbfe5a -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr8fbbbbc4_eec4_468f_bdc8_2e20f3fbfe5a">
+        <rdfs:label xml:lang="zh">Subcontractor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9984cf02_932a_4958_b49c_7674db2d856c -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr9984cf02_932a_4958_b49c_7674db2d856c">
+        <rdf:type rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr82a38372_f46f_4973_8dc2_283051f13ece"/>
+        <rdfs:label xml:lang="zh">Contractor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckra49aacc6_9eec_4436_b530_46a1e5a80999 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckra49aacc6_9eec_4436_b530_46a1e5a80999">
+        <rdfs:label xml:lang="zh">Supplier</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrb5325480_7174_4ab5_adf8_5e2a88aa984a -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrb5325480_7174_4ab5_adf8_5e2a88aa984a">
+        <rdfs:label xml:lang="zh">ProjectManager</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrdc41e372_4935_4143_97ec_599224c1cb7e -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrdc41e372_4935_4143_97ec_599224c1cb7e">
+        <rdfs:label xml:lang="zh">Supervisor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrf28c8c32_fdc6_4588_8626_f7a93588dbd9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckrf28c8c32_fdc6_4588_8626_f7a93588dbd9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr82a38372_f46f_4973_8dc2_283051f13ece"/>
+        <rdfs:label xml:lang="zh">Client</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
