@@ -1,5 +1,5 @@
 # Contract Knowledge Graph (CKG)
-### Table of Contents (updating)
+### Table of Contents (continually updating)
 * Ontological layer of CKG:
   [ContractOntology.owl](https://github.com/CamilleZ99/ContractKG/blob/main/ContractOntology.owl)
 * Contract knowledge written in RDF-star triples:
