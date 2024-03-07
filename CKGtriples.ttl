@@ -291,4 +291,3 @@ ckg:ContractorsApplicationForPayment ckg:hasProperty ckg:isInTheFormStatedInTheS
 <<ckg:Contractor ckg:doesNotsubmit ckg:applicationForPayment>>
 	ckg:hasTimeConstraint ckg:beforeAssessmentDate ;
 	ckg:if-then <<ckg:amountDuetAssessmentDate ckg:hasProperty ckg:lesserOfAmountProjectManagerAsDueAtAssessmentDate-And-TheamountDueAtPreviousAssessmentDate>> .
-#50.5

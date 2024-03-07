@@ -78,7 +78,7 @@
     <!-- http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr63984d9d_41c8_46b3_99e6_453d03a7f7b9 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/89697/ontologies/2023/1/untitled-ontology-17#ckr63984d9d_41c8_46b3_99e6_453d03a7f7b9">
-        <rdfs:label xml:lang="zh">Behavior</rdfs:label>
+        <rdfs:label xml:lang="zh">Event</rdfs:label>
     </owl:Class>
     
 
