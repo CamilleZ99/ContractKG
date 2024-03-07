@@ -1,4 +1,4 @@
-# Enhancing large language models with knowledge graphs for automatic construction contract reasoning
+# Enhancing large language models with knowledge graphs for automated construction contract reasoning
 ### Table of Contents
 * NCKG ontology:
   [ContractOntology.owl](https://github.com/CamilleZ99/ContractKG/blob/main/ContractOntology.owl)
