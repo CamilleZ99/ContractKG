@@ -1,10 +1,12 @@
-# Contract Knowledge Graph (CKG)
-### Table of Contents (continually updating)
-* Ontological layer of CKG:
+# Enhancing large language models with knowledge graphs for automatic construction contract reasoning
+### Table of Contents
+* NCKG ontology:
   [ContractOntology.owl](https://github.com/CamilleZ99/ContractKG/blob/main/ContractOntology.owl)
-* Contract knowledge written in RDF-star triples:
+* Partial instances written in RDF-star triples:
   [CKGtriples.ttl](https://github.com/CamilleZ99/ContractKG/blob/main/CKGtriples.ttl)
-### Framework of Contract Knowledge Query based on CKG
-![image](https://user-images.githubusercontent.com/73239436/218260663-25978a52-61c3-4812-a7cf-11e672442662.png)
-The contract ontology is constructed in Protégé, regulating the semantic schema for contract data. And contract knowledge in standard form contract (e.g.NEC) is written in RDF turtle. The ontology and triple files are imported into GraphDB where all of the semantic contractual entities and relations can be visulized and queried through the database.
+* The output of case study, including the prompts and LLM answer for each case:
+  [Full output of case illustration.pdf](https://github.com/CamilleZ99/ContractKG/blob/30da985a574f4c26368b9528e1a11bcdb483ea9c/Full%20output%20of%20case%20illustration.pdf)
+### NCKG-enhanced LLMs for automated contract reasoning framework
+![image](https://github.com/CamilleZ99/ContractKG/assets/73239436/3800b166-ff82-44a9-afa0-c4baa6122f9b)
+
 
