@@ -4,6 +4,8 @@ This repository presents supplementary data to the paper *Enhancing large langua
 
 ### Supplementary of Methodology
 
+- [NCKG_ontology_definition.pdf](https://github.com/CamilleZ99/ContractKG/blob/main/NCKG_ontology_definition.pdf)
+
 - [psuedocode_for_NCKG_modeling](https://github.com/CamilleZ99/ContractKG/blob/main/psuedocode_for_NCKG_modeling.pdf)
 - [psuedocode_for_NCKG_retrieval](https://github.com/CamilleZ99/ContractKG/blob/main/psuedocode_for_NCKG_retrieval.pdf)
 
