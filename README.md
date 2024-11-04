@@ -1,7 +1,5 @@
 # Enhancing large language models with knowledge graphs for automatic construction contract risk identification
 
-This repository presents supplementary data to the paper *Enhancing large language models with knowledge graphs for automatic construction contract risk identification*. 
-
 ### Supplementary of Methodology
 
 - [NCKG_ontology_definition.pdf](https://github.com/CamilleZ99/ContractKG/blob/main/NCKG_ontology_definition.pdf)
